@@ -23,7 +23,7 @@
         </thead>
         {% for product in products_list %}
             <tr>
-                <td>{{ product.name }}</td>
+                <td><a href="{% url 'myapp:detail' product.id %}">{{ product.name }}</a></td>
                 <td>{{ product.price }}</td>
                 <td>{{ product.desc }}</td>
             </tr>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    table, td, th {
+        border: 1px solid;
+    }
+    table {
+        border-collapse: collapse;
+    }
+</style>
+</head>
+<body>
+
+{% if product %}
+    <table>
+            <tr><td>Product Name</td><td>{{ product.name }}</td></tr>
+            <tr><td>Price in USD</td><td>{{ product.price }}</td></tr>
+            <tr><td>Description</td><td>{{ product.desc }}</td></tr>
+    </table>
+{% endif %}
+
+</body>
+</html>

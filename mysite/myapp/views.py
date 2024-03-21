@@ -9,3 +9,7 @@ def index(request):
 def products(request):
     context = {"products_list": Product.objects.all()}
     return render(request, "myapp/products.html", context)
+
+def product_detail(request, id):
+    context = {"product": Product.objects.get(pk=id)}
+    return render(request, "myapp/detail.html", context)
